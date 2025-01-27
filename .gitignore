@@ -1,5 +1,8 @@
-/.idea
 /.gradle
-/build
+/.idea
 /local.properties
+build/
 
+gst-build-*/
+assets/
+GStreamer.java

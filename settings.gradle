@@ -1,5 +1,5 @@
-include ':android-tutorial-1' //版本号
-include ':android-tutorial-2' //测试音频
-include ':android-tutorial-3' //测试视频
-include ':android-tutorial-4' //网络视频
-include ':android-tutorial-5'
+//include ':android-tutorial-1' //获取版本号
+//include ':android-tutorial-2' //播放测试音频
+include ':android-tutorial-3' //播放测试视频
+//include ':android-tutorial-4' //媒体播放器(设置视频源、播放进度)
+//include ':android-tutorial-5' //媒体播放器(注册为媒体播放器、添加文件选择器)

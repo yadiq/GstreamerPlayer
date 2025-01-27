@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.MainActivity"
+            android:name="org.freedesktop.gstreamer.tutorials.tutorial_3.Tutorial3"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

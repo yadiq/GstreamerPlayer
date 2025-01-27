@@ -2,3 +2,6 @@
 assets/
 gst-build-*/
 src/org/freedesktop/gstreamer/GStreamer.java
+/build
+/gst-build-armeabi-v7a
+/gst-build-arm64-v8a

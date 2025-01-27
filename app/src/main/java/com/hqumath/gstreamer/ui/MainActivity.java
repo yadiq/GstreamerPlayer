@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.hqumath.gstreamer.databinding.ActivityMainBinding;
 
+import org.freedesktop.gstreamer.GStreamerPlayer;
+
 /**
  * ****************************************************************
  * 作    者: Created by gyd
@@ -23,5 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        binding.tvValue.setText(GStreamerPlayer.getVersion());
     }
 }

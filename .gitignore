@@ -4,5 +4,6 @@
 build/
 
 gst-build-*/
+gst-android-build/
 assets/
 GStreamer.java

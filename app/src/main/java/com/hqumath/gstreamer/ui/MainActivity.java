@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.hqumath.gstreamer.databinding.ActivityMainBinding;
+import com.hqumath.gstreamer.utils.CommonUtil;
 
 import org.freedesktop.gstreamer.GStreamerPlayer;
 
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        CommonUtil.init(this);
         binding.tvValue.setText(GStreamerPlayer.getVersion());
     }
 }

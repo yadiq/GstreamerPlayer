@@ -3,7 +3,7 @@ LOCAL_PATH := $(call my-dir) #设置当前模块的编译路径为当前文件�
 include $(CLEAR_VARS) #清理(可能由其他模块设置过的)编译环境中用到的变量
 
 LOCAL_MODULE    := gstreamer_player #当前模块的名称
-LOCAL_SRC_FILES := main.cpp dummy.cpp #当前模块包含的源代码文件
+LOCAL_SRC_FILES := main.c dummy.cpp #当前模块包含的源代码文件
 LOCAL_SHARED_LIBRARIES := gstreamer_android #当前模块在运行时依赖的动态库
 LOCAL_LDLIBS := -llog -landroid #连接系统库
 include $(BUILD_SHARED_LIBRARY) #编译共享库

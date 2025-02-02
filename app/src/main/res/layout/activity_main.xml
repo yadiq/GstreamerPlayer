@@ -30,9 +30,22 @@
 
     </LinearLayout>
 
-    <SurfaceView
-        android:id="@+id/surface1"
+    <!--视频-->
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="200dp">
+
+        <SurfaceView
+            android:id="@+id/surface1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/ivLoadingVideo1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
 
 </LinearLayout>

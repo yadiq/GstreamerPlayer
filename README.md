@@ -1,4 +1,5 @@
 # GstreamerPlayer
+安装和使用说明见博客 [Gstreamer安装和使用](https://yadiq.github.io/2022/08/15/MediaGstreamerInstall/)
 
 #### 介绍
 1. gstreamer播放器。

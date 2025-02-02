@@ -5,6 +5,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
+import com.hqumath.gstreamer.R;
 import com.hqumath.gstreamer.databinding.ActivityMainBinding;
 import com.hqumath.gstreamer.utils.CommonUtil;
 
@@ -32,14 +34,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         CommonUtil.init(this);
-//        binding.tvValue.setText(GStreamerPlayer.getVersion());
+        Glide.with(this).load(R.drawable.icon_loading).into(binding.ivLoadingVideo1);
 
         binding.btnInit1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (videoHelper1 == null) {
                     videoHelper1 = new GStreamerPlayer();
-                    videoHelper1.init(defaultMediaUri, binding.surface1.getHolder(), null);
+                    videoHelper1.init(defaultMediaUri, binding.surface1.getHolder(), new GStreamerPlayer.VideoListener() {
+                        @Override
+                        public void showLoading(boolean isShow) {
+                            if (isShow) {
+                                binding.getRoot().post(() -> binding.ivLoadingVideo1.setVisibility(View.VISIBLE));
+                            } else {
+                                binding.getRoot().postDelayed(() -> binding.ivLoadingVideo1.setVisibility(View.GONE), 500);//低性能手机，loading隐藏失败
+                            }
+                        }
+
+                        @Override
+                        public void showNoSignal(boolean isShow) {
+
+                        }
+                    });
                     videoHelper1.surfaceInit();
                     CommonUtil.toast("初始化视频1");
                 }
